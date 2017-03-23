@@ -1,4 +1,7 @@
 body {
+    font-family: 'Optima', sans-serif;
+    font-size: 13pt;
+    color: #333;
     margin: 60px auto;
     width: 70%;
 }
