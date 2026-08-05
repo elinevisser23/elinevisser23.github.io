@@ -1,25 +1,28 @@
-/* Core Page Layout & Typography */
+/* Core Page Setup & Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
 
+/* Core Page Layout & Typography */
 body {
-    font-family: 'Optima', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Optima first; falls back to clean modern system fonts if Optima isn't installed */
+    font-family: 'Optima', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 13pt;
     line-height: 1.6;
     color: #333333;
     max-width: 820px;
     width: 90%;
-    margin: 40px auto;
+    margin: 0 auto 40px auto;
+    background-color: #ffffff;
 }
 
-/* Header & Navigation */
+/* Sticky Header & Navigation */
 header {
     position: sticky;
     top: 0;
-    background-color: #ffffff; /* Prevents text underneath from showing through */
+    background-color: #ffffff; /* Blocks content scrolling beneath it */
     border-bottom: 1px solid #e0e0e0;
-    padding: 15px 0;
+    padding: 20px 0 15px 0;
     margin-bottom: 35px;
     z-index: 1000;
 }
@@ -28,10 +31,11 @@ h1 {
     font-size: 24pt;
     font-weight: normal;
     margin: 0 0 10px 0;
+    letter-spacing: -0.02em;
 }
 
 nav ul, footer ul {
-    font-family: 'Optima', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: inherit;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -39,7 +43,7 @@ nav ul, footer ul {
 }
 
 nav ul li, footer ul li {
-    display: inline;
+    display: inline-block;
     margin-right: 20px;
 }
 
@@ -64,6 +68,7 @@ nav a {
 
 nav a:hover {
     color: #000000;
+    text-decoration: none;
 }
 
 /* Headings */
@@ -72,7 +77,7 @@ h2 {
     font-weight: bold;
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 5px;
-    margin-top: 40px;
+    margin-top: 45px;
     margin-bottom: 15px;
 }
 
@@ -82,6 +87,14 @@ h3 {
     margin-top: 25px;
     margin-bottom: 10px;
     color: #222222;
+}
+
+h4 {
+    font-size: 13pt;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #444444;
 }
 
 /* Paragraphs & Containers */
@@ -121,7 +134,7 @@ th {
 .bib-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 20px 0;
 }
 
 .bib-list li {
@@ -140,14 +153,13 @@ th {
 @media (max-width: 600px) {
     body {
         width: 92%;
-        margin: 20px auto;
+        margin-bottom: 20px;
         font-size: 12pt;
     }
 
     nav ul li {
-        display: inline-block;
         margin-right: 12px;
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
 
     .bib-list li {
