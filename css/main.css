@@ -42,10 +42,13 @@ nav ul li, footer ul li {
     margin-right: 20px;
 }
 
-/* Offsets sticky header overlap during anchor navigation */
-section[id],
-h2[id] {
-    scroll-margin-top: 100px; /* Adjust height to match header clearance */
+/* Fix header overlap on anchor clicks */
+section {
+    scroll-margin-top: 110px;
+}
+
+h2 {
+    scroll-margin-top: 110px;
 }
 
 /* Links & Interactivity */
